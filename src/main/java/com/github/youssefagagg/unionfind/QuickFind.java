@@ -1,4 +1,4 @@
-package com.github.youssefagagg.week1.uf;
+package com.github.youssefagagg.unionfind;
 
 public class QuickFind implements UnionFind {
     private final int[] uf;
