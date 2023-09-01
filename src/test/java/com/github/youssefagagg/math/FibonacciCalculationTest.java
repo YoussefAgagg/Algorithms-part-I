@@ -33,5 +33,22 @@ class FibonacciCalculationTest {
         assertThat(FibonacciCalculation.fibonacciEnhance(7)).isEqualTo(13L);
         assertThat(FibonacciCalculation.fibonacciEnhance(8)).isEqualTo(21L);
         assertThat(FibonacciCalculation.fibonacciEnhance(50)).isEqualTo(12586269025L); //faster
+        // assertThat(FibonacciCalculation.fibonacciEnhance(100)).isEqualTo(354224848179261915075L);  the result will exceed long  size limit
+    }
+
+    @Test
+    void fibonacciEnhanceBigInteger() {
+        assertThat(FibonacciCalculation.fibonacciEnhanceBigInteger(0)).isZero();
+        assertThat(FibonacciCalculation.fibonacciEnhanceBigInteger(1)).isOne();
+        assertThat(FibonacciCalculation.fibonacciEnhanceBigInteger(2)).isOne();
+        assertThat(FibonacciCalculation.fibonacciEnhanceBigInteger(3)).isEqualTo(2L);
+        assertThat(FibonacciCalculation.fibonacciEnhanceBigInteger(4)).isEqualTo(3L);
+        assertThat(FibonacciCalculation.fibonacciEnhanceBigInteger(5)).isEqualTo(5L);
+        assertThat(FibonacciCalculation.fibonacciEnhanceBigInteger(6)).isEqualTo(8L);
+        assertThat(FibonacciCalculation.fibonacciEnhanceBigInteger(7)).isEqualTo(13L);
+        assertThat(FibonacciCalculation.fibonacciEnhanceBigInteger(8)).isEqualTo(21L);
+        assertThat(FibonacciCalculation.fibonacciEnhanceBigInteger(50)).isEqualTo(12586269025L); //faster
+        assertThat(FibonacciCalculation.fibonacciEnhanceBigInteger(100)).isEqualTo("354224848179261915075");  // works fine
+
     }
 }
